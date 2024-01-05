@@ -1,7 +1,7 @@
 const io = require('socket.io')(8800, {
   cors: {
-    // origin: 'http://localhost:5173',
-    origin: 'https://glasklar-chat.netlify.app',
+    origin: 'http://localhost:5173',
+    // origin: 'https://glasklar-chat.netlify.app',
   },
 });
 
