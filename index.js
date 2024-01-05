@@ -1,14 +1,14 @@
 const io = require('socket.io')(8800, {
   cors: {
-    origin: 'http://localhost:5173',
-    // origin: 'https://glasklar-chat.netlify.app',
+    // origin: 'http://localhost:5173',
+    origin: 'https://glasklar-chat.netlify.app',
   },
 });
 
 let activeUsers = [];
 
 io.on('connection', (socket) => {
-  console.log('a new user connected')
+  
   // add new User
   socket.on('new-user-add', (newUserId) => {
     // if user is not added previously
