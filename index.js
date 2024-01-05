@@ -38,4 +38,12 @@ io.on('connection', (socket) => {
       io.to(user.socketId).emit('recieve-message', data);
     }
   });
+  socket.on('is-typing', (data) => {
+    const { receiverId, isTyping } = data;
+    const user = activeUsers.find((user) => user.userId === receiverId);
+
+    if (user) {
+      io.to(user.socketId).emit('receive-is-typing', isTyping);
+    }
+  });
 });
