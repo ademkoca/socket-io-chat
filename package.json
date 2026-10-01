@@ -1,9 +1,15 @@
 {
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node --test"
   },
   "dependencies": {
+    "jsonwebtoken": "^9",
     "nodemon": "^2.0.16",
     "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4"
   }
 }
